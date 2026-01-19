@@ -1,0 +1,203 @@
+/* =====================================================
+   RESET BÁSICO
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* =====================================================
+   BASE GLOBAL — FUNDO AZUL ESCOVADO
+   ===================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e6e6e6;
+
+    background:
+        linear-gradient(135deg, #0b1c2d, #123a5c),
+        repeating-linear-gradient(
+            135deg,
+            rgba(255,255,255,0.035),
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px,
+            transparent 6px
+        );
+    background-blend-mode: overlay;
+
+    min-height: 100vh;
+}
+
+/* =====================================================
+   HEADER / TOPO
+   ===================================================== */
+
+.topo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 48px;
+
+    background: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(6px);
+}
+
+/* =====================================================
+   LOGO + MARCA
+   ===================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 14px;
+}
+
+/* LOGO (+50%) */
+
+.logo img {
+    height: 12vh;
+    min-height: 96px;
+    max-height: 140px;
+    width: auto;
+}
+
+/* TEXTO iDSK (+300%) */
+
+.marca {
+    font-size: 72px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: #cfe6ff;
+    line-height: 1;
+}
+
+/* =====================================================
+   MENU DE NAVEGAÇÃO
+   ===================================================== */
+
+nav {
+    display: flex;
+    gap: 26px;
+}
+
+nav a {
+    color: #dbeeff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+}
+
+nav a:hover {
+    color: #9ccfff;
+    border-bottom: 1px solid #9ccfff;
+}
+
+/* =====================================================
+   HERO / TÍTULO PRINCIPAL
+   ===================================================== */
+
+.hero {
+    padding: 90px 48px 55px 48px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    max-width: 960px;
+    color: #9ccfff;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL
+   ===================================================== */
+
+.conteudo {
+    padding: 55px 48px;
+    max-width: 960px;
+}
+
+.conteudo p {
+    line-height: 1.75;
+    margin-bottom: 22px;
+    color: #e2e2e2;
+}
+
+/* =====================================================
+   VÍDEOS (YouTube / Cloudflare Stream)
+   ===================================================== */
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%;
+    margin: 40px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =====================================================
+   RODAPÉ
+   ===================================================== */
+
+footer {
+    padding: 26px 48px;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+/* =====================================================
+   MOBILE — AJUSTE DE PESO VISUAL
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .topo {
+        padding: 22px 24px;
+    }
+
+    .logo {
+        gap: 12px;
+    }
+
+    .logo img {
+        height: 96px;
+        max-height: none;
+    }
+
+    .marca {
+        font-size: 42px;
+        letter-spacing: 0.14em;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 70px 24px 40px 24px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .conteudo {
+        padding: 40px 24px;
+    }
+}
